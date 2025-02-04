@@ -1,5 +1,5 @@
-from pathlib import Path
 import pdfplumber
+from pathlib import Path
 
 def extract_text_from_pdf(file_path):
     full_text = ""
@@ -12,7 +12,7 @@ def extract_text_from_pdf(file_path):
 
 if __name__ == "__main__":
     # Get the path to the directory where this script is located.
-    base_path = Path(__file__).resolve().parent
+    base_path = Path(__file__).resolve().parent.parent
     # Build the relative path to the PDF file located in the 'pdf-parse-pickup' folder.
     pdf_file = base_path / "pdf-parse-pickup" / "Sample-Completed-SBC.pdf" 
     
@@ -20,5 +20,5 @@ if __name__ == "__main__":
     print("Extracted Text:")
     print(extracted_text)
 
-with open ('extracted_text.tst', 'w', encoding='utf-8') as f:
-    f.write(extracted_text)
+    with open ('extracted_text.tst', 'w', encoding='utf-8') as f:
+        f.write(extracted_text)

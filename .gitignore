@@ -1,0 +1,8 @@
+# caches
+__pycache__/
+
+# virtual environment directory
+env/
+
+# mac dev
+.DS_Store
